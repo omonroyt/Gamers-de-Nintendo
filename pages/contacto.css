@@ -1,0 +1,90 @@
+body {
+    background-color: #0E0B17;;
+    font-family: sans-serif;
+    color: #fff;
+}
+.form {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    container-type: inline-size;
+    container-name: form;
+}
+
+.form__title {
+    font-size: 2.4rem;
+}
+
+.form__form {
+    display: grid;
+    max-width: 600px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.form__input-container :is(input,textarea) {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0px;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 0 42px 0 #0003;
+}
+
+.form__input-container textarea {
+    resize: none;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.form__input-container input[type="submit"] {
+    background-color: #48e;
+    color: #fff;
+    padding: 15px;
+}
+
+
+/?-------------Contact Queries------------------------------/
+
+@container form (min-width:900px) {
+    .form__form {
+        grid-template-columns: 1fr, 1fr;
+        grid-template-areas: 
+        "name last"
+        "email email"
+        "message message"
+        "button button";
+        gap: 15px;
+        background-image: linear-gradient(#18233f44,#18233f22);
+        padding: 30px;
+        border-radius: 15px;
+    }
+
+    .form__input-container:first-child {
+        grid-area: name;
+    }
+
+    .form__input-container:nth-child(2) {
+        grid-area: last;
+    }
+
+    .form__input-container:nth-child(3) {
+        grid-area: email;
+    }
+
+    .form__input-container:nth-child(4) {
+        grid-area: message;
+    }
+
+    .form__input-container:nth-child(5) {
+        grid-area: button;
+    }
+
+    .form__input-container :is(input, textarea) {
+        box-shadow: none;
+        border-radius: 6px;
+    }
+}
