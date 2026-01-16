@@ -4,4 +4,4 @@ node_modules/
 .env
 .vscode/
 # Ignorar el config dentro de pages
-pages/config.js
+pages/buscar/config.js
