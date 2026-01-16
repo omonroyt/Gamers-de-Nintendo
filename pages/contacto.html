@@ -3,185 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/contacto.css" />
+    <link rel="stylesheet" href="contacto.css" />
     <title>Contacto</title>
   </head>
-  <header class="nav-bar">
-    <nav class="nav">
-      <a href="#" class="nav__brand">
-        <img class="nav__logo" src="/assets/iconopage.png" alt="PokeZone" />
-        <span class="nav__title">PokeZone</span>
-      </a>
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" href="../index.html">Inicio</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="./nosotros.html">Quiénes somos</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="./contacto.html">Contacto</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="./articulo.html">Artículos</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="./buscar/buscar.html">Buscar</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <body class="page page--contact">
-    <main class="contact">
-      <!-- Hero / Intro -->
-      <section class="contact__hero">
-        <h1 class="contact__title">CONTACTO</h1>
+  <body>
 
-        <p class="contact__lead">
-          ¿Quieres ponerte en contacto con el equipo de Gamers de Nintendo? Aquí
-          te dejamos nuestras formas de contacto para dudas, sugerencias o
-          colaboraciones.
-        </p>
-      </section>
+<section>
+    <h1>CONTACTO</h1>
+    <p>
+      ¿Quieres ponerte en contacto con el equipo de Gamers de Nintendo?
+    Aquí te dejamos nuestras formas de contacto para dudas, sugerencias
+    o colaboraciones.
+    </p>  
+<h2>
+  Contáctanos! 👨‍💻
+</h2>
+  <h2> 🎮 Puedes enviarnos un correo a: </h2>
+  <ul>
+    <li>isauracasas@nintendo.com</li>
+    <li>juanalarcon@nintendo.com</li>
+    <li>hageobalam@nintendo.com</li>
+    <li>joseevelio@nintendo.com</li>
+    <li>marianacarmona@nintendo.com</li>
+    <li>oscarmonroy@nintendo.com</li>
+    <li>andreameneses@nintendo.com</li>
+    <li>gabrielonitsuaf@nintendo.com</li>
+    <li>esaúmontiel@nintendo.com</li>
+  </ul>
+ <p>
+    Nuestro equipo está conformado por fans de Nintendo apasionados por
+    los videojuegos, las consolas y la cultura gamer.
+  </p>
+</section>
 
-      <!-- Info + Lista -->
-      <section class="contact__grid">
-        <article class="contact-card">
-          <h2 class="contact-card__title">Contáctanos 👨‍💻</h2>
-          <h3 class="contact-card__subtitle">
-            🎮 Puedes enviarnos un correo a:
-          </h3>
 
-          <ul class="email-list">
-            <li class="email-list__item">isauracasas@nintendo.com</li>
-            <li class="email-list__item">juanalarcon@nintendo.com</li>
-            <li class="email-list__item">hageobalam@nintendo.com</li>
-            <li class="email-list__item">joseevelio@nintendo.com</li>
-            <li class="email-list__item">marianacarmona@nintendo.com</li>
-            <li class="email-list__item">oscarmonroy@nintendo.com</li>
-            <li class="email-list__item">andreameneses@nintendo.com</li>
-            <li class="email-list__item">gabrielonitsuaf@nintendo.com</li>
-            <li class="email-list__item">esaumontiel@nintendo.com</li>
-          </ul>
-
-          <p class="contact-card__text">
-            Nuestro equipo está conformado por fans de Nintendo apasionados por
-            los videojuegos, las consolas y la cultura gamer.
-          </p>
-        </article>
-
-        <!-- Form -->
-        <section class="contact-form">
-          <h2 class="contact-form__title">📲 Para más consultas:</h2>
-
-          <form class="contact-form__form">
-            <div class="field">
-              <label class="field__label" for="name">Nombre</label>
-              <input
-                class="field__input"
-                id="name"
-                type="text"
-                placeholder="John"
-              />
+  <section class="form">
+        <h2 class="form__title">📲 Para más consultas: </h2>
+        <form class="form__form">
+            <div class="form__input-container">
+                <label for="">Nombre 
+                    <input type="text" placeholder="John">
+                </label>
             </div>
-
-            <div class="field">
-              <label class="field__label" for="last">Apellido</label>
-              <input
-                class="field__input"
-                id="last"
-                type="text"
-                placeholder="Doe"
-              />
+            <div class="form__input-container">
+                <label for="">Apellido
+                    <input type="text" placeholder="Doe">
+                </label>
             </div>
-
-            <div class="field field--full">
-              <label class="field__label" for="email">E-mail</label>
-              <input
-                class="field__input"
-                id="email"
-                type="email"
-                placeholder="mail@example.com"
-              />
+            <div class="form__input-container">
+                <label for="">E-mail
+                    <input type="email" placeholder="mail@example.com">
+                </label>
             </div>
-
-            <div class="field field--full">
-              <label class="field__label" for="msg">Mensaje</label>
-              <textarea
-                class="field__textarea"
-                id="msg"
-                placeholder="Your message"
-              ></textarea>
+            <div class="form__input-container">
+                <label for="">Mensaje
+                    <textarea placeholder="Your message"></textarea>
+                </label>
             </div>
-
-            <button class="contact-form__submit" type="submit">
-              Enviar mensaje
-            </button>
-          </form>
-        </section>
-      </section>
-      <!-- FOOTER -->
-
-      <footer>
-        <div class="footer-content">
-          <div class="footer-canvas">
-            <canvas id="game"></canvas>
-          </div>
-          <div class="footer-info">
-            <p id="Bugbusters"><strong>Bugbusters</strong></p>
-            <div class="authors-grid">
-              <div class="author">
-                <p>Isaura Casas</p>
-                <p>+52 55 1234 5678</p>
-                <p>isauracasas@nintendo.com</p>
-              </div>
-              <div class="author">
-                <p>Juan Alarcon</p>
-                <p>+52 55 2345 6789</p>
-                <p>juanalarcon@nintendo.com</p>
-              </div>
-              <div class="author">
-                <p>Hageo Balam</p>
-                <p>+52 55 3456 7890</p>
-                <p>hageobalam@nintendo.com</p>
-              </div>
-              <div class="author">
-                <p>Jose Evelio</p>
-                <p>+52 55 4567 8901</p>
-                <p>joseevelio@nintendo.com</p>
-              </div>
-              <div class="author">
-                <p>Mariana Carmona</p>
-                <p>+52 55 5678 9012</p>
-                <p>marianacarmona@nintendo.com</p>
-              </div>
-              <div class="author">
-                <p>Oscar Monroy</p>
-                <p>+52 55 6789 0123</p>
-                <p>oscarmonroy@nintendo.com</p>
-              </div>
-              <div class="author">
-                <p>Andrea Meneses</p>
-                <p>+52 55 7890 1234</p>
-                <p>andreameneses@nintendo.com</p>
-              </div>
-              <div class="author">
-                <p>Esaú Montiel</p>
-                <p>+52 55 7711 6385</p>
-                <p>esaumontiel@nintendo.com</p>
-              </div>
-              <div class="author">
-                <p>Gabriel Onitsuaf</p>
-                <p>+52 55 8901 2345</p>
-                <p>gabrielonitsuaf@nintendo.com</p>
-              </div>
+            <div class="form__input-container">
+                    <input type="submit">
             </div>
-            <p>© 2026 All rights reserved</p>
-          </div>
-        </div>
-      </footer>
-      <script src="../scripts/pyramid.js"></script>
-      <script src="../scripts/3D_demistified.js"></script>
-    </main>
+        </form>
+    </section>
+
   </body>
 </html>
