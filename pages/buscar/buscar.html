@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Buscador de Videojuegos</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="buscar.css" />
+  <!-- JS del módulo -->
+  <script type="module" src="appBuscar.js"></script>
+  <!-- CONFIG  -->
+  <script src="config.js"></script>
+</head>
+  <header class="nav-bar">
+    <nav class="nav">
+      <a href="#" class="nav__brand">
+        <img class="nav__logo" src="/assets/iconopage.png" alt="PokeZone" />
+        <span class="nav__title">PokeZone</span>
+      </a>
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="../../index.html">Inicio</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="../nosotros.html">Quiénes somos</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="../contacto.html">Contacto</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="../articulo.html">Artículos</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./buscar.html">Buscar</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+<body class="bg-app">
+    <!-- primera seccion con el buscador -->
+    <main class="container py-4">
+        <section class="hero-search p-4 p-md-5 mb-4">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+            <h1 class="display-6 fw-bold mb-2">Tu Universo Gaming, en un solo lugar</h1>
+            <p class="text-soft mb-0">
+                Explora el universo Nintendo y más allá. Revisa ratings, compara plataformas y encuentra tu próxima obsesión en nuestra base de datos.
+            </p>
+            </div>
+
+            <div class="col-lg-5">
+            <div class="search-box">
+                <label class="form-label text-soft mb-2">Buscar videojuego</label>
+                <div class="input-group input-group-lg">
+                <input id="searchInput" type="text" class="form-control input-glow" placeholder="Ej. Zelda, Mario, Halo..." />
+                <button id="searchBtn" class="btn btn-brand" type="button">Buscar</button>
+                </div>
+                <small class="text-soft d-block mt-2">
+                Tip: prueba con “Super Mario”, “Pokémon”, “Mario Kart”, “Zelda”.
+                </small>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="row g-4">
+        <!-- Resultados -->
+        <div class="col-lg-5">
+            <div class="cardwidget p-3 p-md-4 h-100">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h2 class="h5 mb-0">Resultados</h2>
+                <span class="pill" id="resultsCount">0</span>
+            </div>
+
+            <div id="statusMsg" class="alert alert-dark-soft d-none" role="alert"></div>
+
+            <div id="resultsList" class="results-list"></div>
+            </div>
+        </div>
+
+        <!-- Detalle -->
+        <div class="col-lg-7">
+            <div class="game-detail p-3 p-md-4 h-100">
+            <div class="d-flex justify-content-between align-items-start gap-3">
+                <div>
+                <h2 id="gameTitle" class="h3 fw-bold mb-1">Selecciona un juego</h2>
+                <p id="gameSubtitle" class="text-soft mb-0">Haz click en un resultado para ver su ficha completa.</p>
+                </div>
+                <span id="gameRating" class="rating-badge d-none">—</span>
+            </div>
+
+            <hr class="divider my-4">
+
+            <div class="row g-4">
+                <div class="col-md-5">
+                <div class="cover-wrap">
+                    <img id="gameCover" class="cover-img" src="https://placehold.co/900x1200/png" alt="Portada del juego">
+                </div>
+                </div>
+
+                <div class="col-md-7">
+                <div class="info-grid">
+                    <div class="info-item">
+                    <span class="label">Fecha de lanzamiento</span>
+                    <span id="gameRelease" class="value">—</span>
+                    </div>
+                    <div class="info-item">
+                    <span class="label">Géneros</span>
+                    <span id="gameGenres" class="value">—</span>
+                    </div>
+                    <div class="info-item">
+                    <span class="label">Plataformas</span>
+                    <span id="gamePlatforms" class="value">—</span>
+                    </div>
+                    <div class="info-item">
+                    <span class="label">Desarrollador</span>
+                    <span id="gameDev" class="value">—</span>
+                    </div>
+                    <div class="info-item">
+                    <span class="label">Publisher</span>
+                    <span id="gamePublisher" class="value">—</span>
+                    </div>
+                </div>
+
+                <div class="mt-4">
+                    <h3 class="h6 text-uppercase text-soft mb-2">Descripción</h3>
+                    <p id="gameDesc" class="text-soft mb-0">—</p>
+                </div>
+
+            </div>
+        </div>
+        </section>
+    </main>
+
+     <!-- FOOTER -->
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-canvas">
+            <canvas id="game"></canvas>
+          </div>
+          <div class="footer-info">
+            <p id="Bugbusters"><strong>Bugbusters</strong></p>
+            <div class="authors-grid">
+              <div class="author">
+                <p>Isaura Casas</p>
+                <p>+52 55 1234 5678</p>
+                <p>isauracasas@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Juan Alarcon</p>
+                <p>+52 55 2345 6789</p>
+                <p>juanalarcon@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Hageo Balam</p>
+                <p>+52 55 3456 7890</p>
+                <p>hageobalam@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Jose Evelio</p>
+                <p>+52 55 4567 8901</p>
+                <p>joseevelio@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Mariana Carmona</p>
+                <p>+52 55 5678 9012</p>
+                <p>marianacarmona@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Oscar Monroy</p>
+                <p>+52 55 6789 0123</p>
+                <p>oscarmonroy@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Andrea Meneses</p>
+                <p>+52 55 7890 1234</p>
+                <p>andreameneses@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Esaú Montiel</p>
+                <p>+52 55 7711 6385</p>
+                <p>esaumontiel@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Gabriel Onitsuaf</p>
+                <p>+52 55 8901 2345</p>
+                <p>gabrielonitsuaf@nintendo.com</p>
+              </div>
+            </div>
+            <p>© 2026 All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+      <script src="../../scripts/pyramid.js"></script>
+      <script src="../../scripts/3D_demistified.js"></script>
+
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- CONFIG compartida -->
+    <script src="../config.js"></script>
+    <!-- JS del módulo -->
+    <script type="module" src="appBuscar.js"></script>
+</body>
+</html>

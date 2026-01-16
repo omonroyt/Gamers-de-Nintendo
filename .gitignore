@@ -1,0 +1,7 @@
+# .gitignore
+.DS_Store
+node_modules/
+.env
+.vscode/
+# Ignorar el config dentro de pages
+pages/config.js

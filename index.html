@@ -6,5 +6,240 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Inicio</title>
   </head>
-  <body></body>
+  <body>
+    <header class="nav-bar">
+      <nav class="nav">
+        <a href="#" class="nav__brand">
+          <img class="nav__logo" src="/assets/iconopage.png" alt="PokeZone" />
+          <span class="nav__title">PokeZone</span>
+        </a>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#main">Inicio</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./pages/nosotros.html">Quiénes somos</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./pages/contacto.html">Contacto</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./pages/articulo.html">Artículos</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="./pages/buscar/buscar.html">Buscar</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- ========== CONTENIDO PRINCIPAL  ========== -->
+    <main class="main" id="main">
+      <!-- SECCIÓN DE BIENVENIDA ESTILO "GENSHIN IMPACT" -->
+      <section class="hero">
+        <!-- Fondo (imagen + overlay oscuro con degradado) -->
+        <div class="hero__bg" aria-hidden="true"></div>
+
+        <div class="hero__container">
+          <!-- Texto -->
+          <div class="hero__content">
+            <p class="hero__eyebrow">
+              Descubre tus juegos favoritos de Nintendo
+            </p>
+
+            <h1 class="hero__title">Bienvenido a PokeZone <br /></h1>
+
+            <a class="hero__btn" href="./pages/articulo.html">
+              Explorar artículos <span class="hero__btn-icon">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN DE JUEGOS DESTACADOS -->
+      <section class="seccion">
+        <h2 class="seccion__titulo">JUEGOS DESTACADOS</h2>
+        <p class="seccion__texto">
+          Los títulos más populares de Nintendo Switch
+        </p>
+
+        <div class="juegos-grid">
+          <!-- JUEGO 1 -->
+          <article class="juego-tarjeta">
+            <div class="juego-tarjeta__header">
+              <span class="juego-tarjeta__categoria">AVENTURA</span>
+              <span class="juego-tarjeta__nuevo">NUEVO</span>
+            </div>
+            <img
+              src="./assets/zelda.jpg"
+              alt="The Legend of Zelda: Tears of the Kingdom"
+              class="juego-tarjeta__imagen"
+            />
+            <div class="juego-tarjeta__contenido">
+              <h3 class="juego-tarjeta__titulo">The Legend of Zelda</h3>
+              <p class="juego-tarjeta__subtitulo">Tears of the Kingdom</p>
+              <p class="juego-tarjeta__descripcion">
+                Explora los cielos de Hyrule en esta secuela épica de Breath of
+                the Wild.
+              </p>
+              <div class="juego-tarjeta__precio">
+                <span class="juego-tarjeta__precio-actual">$59.990</span>
+                <span class="juego-tarjeta__precio-anterior">$69.990</span>
+              </div>
+              <button class="btn btn--rojo btn--pequeno">
+                🛒 Añadir al Carrito
+              </button>
+            </div>
+          </article>
+
+          <!-- JUEGO 2 -->
+          <article class="juego-tarjeta">
+            <div class="juego-tarjeta__header">
+              <span class="juego-tarjeta__categoria">PLATAFORMAS</span>
+              <span class="juego-tarjeta__oferta">-20%</span>
+            </div>
+            <img
+              src="./assets/mario.jpg"
+              alt="Super Mario Bros. Wonder"
+              class="juego-tarjeta__imagen"
+            />
+            <div class="juego-tarjeta__contenido">
+              <h3 class="juego-tarjeta__titulo">Super Mario Bros.</h3>
+              <p class="juego-tarjeta__subtitulo">Wonder</p>
+              <p class="juego-tarjeta__descripcion">
+                Una nueva aventura 2D de Mario con transformaciones mágicas.
+              </p>
+              <div class="juego-tarjeta__precio">
+                <span class="juego-tarjeta__precio-actual">$47.990</span>
+                <span class="juego-tarjeta__precio-anterior">$59.990</span>
+              </div>
+              <button class="btn btn--azul btn--pequeno">Ver Detalles</button>
+            </div>
+          </article>
+
+          <!-- JUEGO 3 -->
+          <article class="juego-tarjeta">
+            <div class="juego-tarjeta__header">
+              <span class="juego-tarjeta__categoria">RPG</span>
+              <span class="juego-tarjeta__popular">POPULAR</span>
+            </div>
+            <img
+              src="./assets/pokemon.jpg"
+              alt="Pokémon Escarlata y Púrpura"
+              class="juego-tarjeta__imagen"
+            />
+            <div class="juego-tarjeta__contenido">
+              <h3 class="juego-tarjeta__titulo">Pokémon</h3>
+              <p class="juego-tarjeta__subtitulo">Escarlata & Púrpura</p>
+              <p class="juego-tarjeta__descripcion">
+                Atrapa, entrena y combate en la nueva región de Paldea.
+              </p>
+              <div class="juego-tarjeta__precio">
+                <span class="juego-tarjeta__precio-actual">$54.990</span>
+                <button class="btn btn--gris btn--pequeno">
+                  Descargar Demo
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- TARJETAS DE NOTICIAS  -->
+      <section class="seccion">
+        <h2 class="seccion__titulo">ÚLTIMAS NOTICIAS</h2>
+
+        <article class="tarjeta">
+          <img
+            src="./assets/nintendo-direct-1.jpg"
+            alt="Nintendo Direct anunciado"
+            class="tarjeta__imagen"
+          />
+          <h2 class="tarjeta__titulo">Nintendo Direct este viernes</h2>
+          <p class="tarjeta__texto">
+            Nintendo ha anunciado un nuevo Direct para este viernes, donde se
+            esperan anuncios de juegos para 2024 y posiblemente noticias sobre
+            Switch 2.
+          </p>
+          <button class="btn btn--rojo">Leer más</button>
+        </article>
+
+        <article class="tarjeta">
+          <img
+            src="./assets/newgames.avif"
+            alt="Nuevos juegos en Switch Online"
+            class="tarjeta__imagen"
+          />
+          <h2 class="tarjeta__titulo">Nuevos juegos en NSO</h2>
+          <p class="tarjeta__texto">
+            Se añaden 3 juegos clásicos de N64 al servicio Nintendo Switch
+            Online: Mario Party 2, Pokémon Stadium y GoldenEye 007.
+          </p>
+          <button class="btn btn--azul">Ver lista completa</button>
+        </article>
+      </section>
+
+      <!-- FOOTER -->
+
+      <footer>
+        <div class="footer-content">
+          <div class="footer-canvas">
+            <canvas id="game"></canvas>
+          </div>
+          <div class="footer-info">
+            <p id="Bugbusters"><strong>Bugbusters</strong></p>
+            <div class="authors-grid">
+              <div class="author">
+                <p>Isaura Casas</p>
+                <p>+52 55 1234 5678</p>
+                <p>isauracasas@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Juan Alarcon</p>
+                <p>+52 55 2345 6789</p>
+                <p>juanalarcon@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Hageo Balam</p>
+                <p>+52 55 3456 7890</p>
+                <p>hageobalam@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Jose Evelio</p>
+                <p>+52 55 4567 8901</p>
+                <p>joseevelio@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Mariana Carmona</p>
+                <p>+52 55 5678 9012</p>
+                <p>marianacarmona@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Oscar Monroy</p>
+                <p>+52 55 6789 0123</p>
+                <p>oscarmonroy@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Andrea Meneses</p>
+                <p>+52 55 7890 1234</p>
+                <p>andreameneses@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Esaú Montiel</p>
+                <p>+52 55 7711 6385</p>
+                <p>esaumontiel@nintendo.com</p>
+              </div>
+              <div class="author">
+                <p>Gabriel Onitsuaf</p>
+                <p>+52 55 8901 2345</p>
+                <p>gabrielonitsuaf@nintendo.com</p>
+              </div>
+            </div>
+            <p>© 2026 All rights reserved</p>
+          </div>
+        </div>
+      </footer>
+      <script src="./scripts/pyramid.js"></script>
+      <script src="../../scripts/3D_demistified.js"></script>
+    </main>
+  </body>
 </html>

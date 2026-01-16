@@ -1,0 +1,444 @@
+/* pages/buscar/buscar.css */
+:root {
+  --bg-0: #070a16;
+  --bg-1: #0b1026;
+  --glass: rgba(255, 255, 255, 0.06);
+  --stroke: rgba(255, 255, 255, 0.12);
+  --text: rgba(255, 255, 255, 0.92);
+  --soft: rgba(255, 255, 255, 0.72);
+  --muted: rgba(255, 255, 255, 0.55);
+  --brand: #4f7cff;
+  --brand2: #7c4dff;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  --radius: 18px;
+}
+
+.bg-app {
+  background:
+    radial-gradient(
+      1200px 600px at 20% 10%,
+      rgba(124, 77, 255, 0.25),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 70% 20%,
+      rgba(79, 124, 255, 0.22),
+      transparent 55%
+    ),
+    linear-gradient(180deg, var(--bg-0), var(--bg-1));
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/*
+===========================================
+          MENÚ DE NAVEGACIÓN
+===========================================
+*/
+.nav-bar {
+  margin-bottom: 100px;
+}
+
+/* Contenedor principal del nav */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+
+/* Logo + nombre */
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.nav__logo {
+  height: 50px;
+}
+
+.nav__title {
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Lista */
+.nav__list {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Items */
+.nav__item {
+  border-radius: 15px;
+}
+
+/* Links */
+.nav__link {
+  display: block;
+  padding: 15px;
+  color: #fff;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  border-radius: 15px;
+  transition: background 0.2s ease;
+}
+
+/* Hover */
+.nav__link:hover {
+  background: #4a5fd6;
+}
+
+.navbar-glass {
+  background: rgba(10, 14, 34, 0.65);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--stroke);
+}
+
+.hero-search {
+  border-radius: var(--radius);
+  background:
+    radial-gradient(
+      600px 300px at 20% 30%,
+      rgba(79, 124, 255, 0.25),
+      transparent 60%
+    ),
+    radial-gradient(
+      600px 300px at 70% 10%,
+      rgba(124, 77, 255, 0.22),
+      transparent 55%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.03)
+    );
+  border: 1px solid var(--stroke);
+  box-shadow: var(--shadow);
+}
+
+.text-kicker {
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.text-soft {
+  color: var(--soft);
+}
+
+.search-box {
+  background: rgba(0, 0, 0, 0.18);
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.input-glow {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text);
+}
+.input-glow::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+.input-glow:focus {
+  box-shadow: 0 0 0 0.2rem rgba(79, 124, 255, 0.25);
+  border-color: rgba(79, 124, 255, 0.45);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+.btn-brand {
+  background: linear-gradient(90deg, var(--brand), var(--brand2));
+  border: 0;
+  color: white;
+  font-weight: 700;
+}
+.btn-brand:hover {
+  filter: brightness(1.05);
+}
+
+.cardwidget {
+  border-radius: var(--radius);
+  border: 1px solid var(--stroke);
+  background: var(--glass);
+  box-shadow: var(--shadow);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(79, 124, 255, 0.16);
+  border: 1px solid rgba(79, 124, 255, 0.28);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.alert-dark-soft {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--soft);
+  border-radius: 14px;
+}
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 660px;
+  overflow: auto;
+  padding-right: 6px;
+}
+
+.result-card {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    border-color 0.12s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(79, 124, 255, 0.35);
+}
+
+.result-thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.result-title {
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+}
+.result-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.game-detail {
+  border-radius: var(--radius);
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: var(--shadow);
+}
+
+.divider {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.cover-wrap {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.cover-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.info-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.info-item .label {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.info-item .value {
+  color: var(--text);
+  font-weight: 700;
+  text-align: right;
+}
+
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(124, 77, 255, 0.16);
+  border: 1px solid rgba(124, 77, 255, 0.28);
+  font-weight: 900;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.mini-stat {
+  border-radius: 16px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.12);
+}
+.mini-stat .label {
+  display: block;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.mini-stat .value {
+  display: block;
+  font-weight: 900;
+  font-size: 1.05rem;
+  margin-top: 2px;
+}
+
+.footer-mini {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+/*
+===========================================
+          FOOOTER
+===========================================
+*/
+
+footer {
+  margin-top: auto;
+  background-color: var(--bg-1);
+  color: var(--text-0);
+  padding: 40px 20px;
+}
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.footer-canvas {
+  flex-shrink: 0;
+}
+
+.footer-canvas canvas {
+  display: block;
+  border: 1px solid var(--border);
+}
+
+.footer-info {
+  flex: 1;
+  text-align: right;
+}
+
+.footer-info > p:first-child {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: var(--text-0);
+}
+
+.authors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px;
+  margin-bottom: 30px;
+}
+
+.author {
+  text-align: right;
+}
+
+.author p {
+  margin: 2px 0;
+  line-height: 1.4;
+}
+
+.author p:first-child {
+  font-weight: 600;
+  color: var(--text-0);
+}
+
+.author p:nth-child(2) {
+  color: var(--text-2);
+  font-size: 0.85em;
+}
+
+.author p:last-child {
+  color: var(--text-1);
+  font-size: 0.9em;
+}
+
+.footer-info > p:last-child {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--text-3);
+  font-size: 0.9em;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-info {
+    text-align: center;
+  }
+
+  .authors-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .author {
+    text-align: center;
+  }
+}
