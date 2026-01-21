@@ -2,141 +2,234 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>The Legend of Zelda</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/pages/styles/articulo.css" />
+    <title>The Legend of Zelda - PokeZone</title>
+    <style>
+      body {
+        padding-top: 70px;
+      }
+      .article-img {
+        max-height: 400px;
+        object-fit: cover;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
-    <header class="nav-bar">
-      <nav class="nav">
-        <a href="#" class="nav__brand">
-          <img class="nav__logo" src="/assets/iconopage.png" alt="PokeZone" />
-          <span class="nav__title">PokeZone</span>
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+          <img src="/assets/iconopage.png" alt="PokeZone" width="40" height="40" class="me-2">
+          <span class="fw-bold">PokeZone</span>
         </a>
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link" href="../index.html">Inicio</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="./nosotros.html">Quiénes somos</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="./contacto.html">Contacto</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="./articulo.html">Artículos</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="./buscar/buscar.html">Buscar</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div class="header">
-      <h1>The Legend of Zelda</h1>
-      <p>Una aventura que todo gamer debe vivir</p>
-    </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./nosotros.html">Quiénes somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./articulo.html">Artículos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./buscar/buscar.html">Buscar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    <main class="container">
-      <article class="article">
-        <img
-          src="/assets/TLoZ.jpg"
-          alt="The Legend of Zelda Breath of the Wild"
-        />
+    <!-- Contenido principal con grid de Bootstrap -->
+    <main class="container-fluid mt-4">
+      <div class="row">
+        <!-- Columna izquierda para publicidad (futuro) -->
+        <div class="col-lg-2 d-none d-lg-block bg-light">
+          <!-- Vacío para publicidad futura -->
+        </div>
+        
+        <!-- Contenido del artículo -->
+        <div class="col-lg-8">
+          <!-- Header del artículo -->
+          <header class="text-center mb-4">
+            <h1 class="display-4 text-danger fw-bold">The Legend of Zelda</h1>
+            <p class="lead text-muted">Una aventura que todo gamer debe vivir</p>
+          </header>
 
-        <p>
-          Dentro del universo de Nintendo, pocas sagas han logrado marcar a los
-          gamers como lo ha hecho <strong>The Legend of Zelda</strong>. Desde su
-          debut en 1986, esta franquicia ha sido sinónimo de aventura,
-          exploración y narrativa épica.
-        </p>
+          <!-- Imagen principal -->
+          <div class="mb-4">
+            <img src="/assets/TLoZ.jpg" alt="The Legend of Zelda Breath of the Wild" class="article-img rounded shadow">
+          </div>
 
-        <h3>Un mundo abierto lleno de libertad</h3>
-        <p>
-          Con títulos como <em>Breath of the Wild</em> y
-          <em>Tears of the Kingdom</em>, Nintendo redefinió el concepto de mundo
-          abierto. En Hyrule, el jugador es libre de explorar, combatir y
-          resolver acertijos a su propio ritmo.
-        </p>
+          <!-- Contenido del artículo -->
+          <article class="mx-auto" style="max-width: 800px;">
+            <p class="fs-5 mb-4">
+              Dentro del universo de Nintendo, pocas sagas han logrado marcar a los
+              gamers como lo ha hecho <strong class="text-danger">The Legend of Zelda</strong>. Desde su
+              debut en 1986, esta franquicia ha sido sinónimo de aventura,
+              exploración y narrativa épica.
+            </p>
 
-        <h3>Link: el héroe del silencio</h3>
-        <p>
-          Link demuestra que no se necesitan palabras para contar una gran
-          historia. A lo largo de la saga, su misión es proteger Hyrule y
-          enfrentar a Ganondorf, representando el eterno conflicto entre el bien
-          y el mal.
-        </p>
+            <h3 class="text-danger mt-4 mb-3">Un mundo abierto lleno de libertad</h3>
+            <p class="fs-5 mb-4">
+              Con títulos como <em>Breath of the Wild</em> y
+              <em>Tears of the Kingdom</em>, Nintendo redefinió el concepto de mundo
+              abierto. En Hyrule, el jugador es libre de explorar, combatir y
+              resolver acertijos a su propio ritmo.
+            </p>
 
-        <h3>Una saga que conecta generaciones</h3>
-        <p>
-          The Legend of Zelda ha unido a jugadores de distintas generaciones,
-          manteniendo viva la esencia de Nintendo: diversión, creatividad y
-          experiencias inolvidables.
-        </p>
+            <div class="alert alert-info mb-4">
+              <h5 class="alert-heading">💡 ¿Sabías que?</h5>
+              <p class="mb-0">Breath of the Wild fue el primer juego de Zelda en ganar el premio a "Juego del Año" en los Game Awards.</p>
+            </div>
 
-        <a href="index.html" class="btn-primary"> Volver al inicio </a>
-      </article>
+            <h3 class="text-danger mt-4 mb-3">Link: el héroe del silencio</h3>
+            <p class="fs-5 mb-4">
+              Link demuestra que no se necesitan palabras para contar una gran
+              historia. A lo largo de la saga, su misión es proteger Hyrule y
+              enfrentar a Ganondorf, representando el eterno conflicto entre el bien
+              y el mal.
+            </p>
+
+            <div class="row mb-4">
+              <div class="col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Juegos principales</h5>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">The Legend of Zelda (1986)</li>
+                      <li class="list-group-item">Ocarina of Time (1998)</li>
+                      <li class="list-group-item">Breath of the Wild (2017)</li>
+                      <li class="list-group-item">Tears of the Kingdom (2023)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h5 class="card-title">Consolas</h5>
+                    <p class="card-text">La saga Zelda ha estado presente en casi todas las consolas de Nintendo:</p>
+                    <div class="d-flex flex-wrap gap-2">
+                      <span class="badge bg-primary">NES</span>
+                      <span class="badge bg-success">Game Boy</span>
+                      <span class="badge bg-warning">N64</span>
+                      <span class="badge bg-danger">GameCube</span>
+                      <span class="badge bg-info">Wii</span>
+                      <span class="badge bg-dark">Switch</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="text-danger mt-4 mb-3">Una saga que conecta generaciones</h3>
+            <p class="fs-5 mb-4">
+              The Legend of Zelda ha unido a jugadores de distintas generaciones,
+              manteniendo viva la esencia de Nintendo: diversión, creatividad y
+              experiencias inolvidables.
+            </p>
+
+            <!-- Botón para volver -->
+            <div class="text-center mt-5">
+              <a href="../index.html" class="btn btn-danger btn-lg px-5">← Volver al inicio</a>
+            </div>
+            
+            <!-- Sección de comentarios (para futuro) -->
+            <div class="card mt-5">
+              <div class="card-header bg-light">
+                <h5 class="mb-0">💬 Comentarios</h5>
+              </div>
+              <div class="card-body">
+                <p class="text-muted mb-0">La sección de comentarios estará disponible próximamente.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+        
+        <!-- Columna derecha para noticias (futuro) -->
+        <div class="col-lg-2 d-none d-lg-block bg-light">
+          <!-- Vacío para noticias futuras -->
+        </div>
+      </div>
     </main>
 
-    <!-- FOOTER -->
-
-    <footer>
-      <div class="footer-content">
-        <div class="footer-canvas">
-          <canvas id="game"></canvas>
-        </div>
-        <div class="footer-info">
-          <p id="Bugbusters"><strong>Bugbusters</strong></p>
-          <div class="authors-grid">
-            <div class="author">
-              <p>Isaura Casas</p>
-              <p>+52 55 1234 5678</p>
-              <p>isauracasas@nintendo.com</p>
-            </div>
-            <div class="author">
-              <p>Juan Alarcon</p>
-              <p>+52 55 2345 6789</p>
-              <p>juanalarcon@nintendo.com</p>
-            </div>
-            <div class="author">
-              <p>Hageo Balam</p>
-              <p>+52 55 3456 7890</p>
-              <p>hageobalam@nintendo.com</p>
-            </div>
-            <div class="author">
-              <p>Jose Evelio</p>
-              <p>+52 55 4567 8901</p>
-              <p>joseevelio@nintendo.com</p>
-            </div>
-            <div class="author">
-              <p>Mariana Carmona</p>
-              <p>+52 55 5678 9012</p>
-              <p>marianacarmona@nintendo.com</p>
-            </div>
-            <div class="author">
-              <p>Oscar Monroy</p>
-              <p>+52 55 6789 0123</p>
-              <p>oscarmonroy@nintendo.com</p>
-            </div>
-            <div class="author">
-              <p>Andrea Meneses</p>
-              <p>+52 55 7890 1234</p>
-              <p>andreameneses@nintendo.com</p>
-            </div>
-            <div class="author">
-              <p>Esaú Montiel</p>
-              <p>+52 55 7711 6385</p>
-              <p>esaumontiel@nintendo.com</p>
-            </div>
-            <div class="author">
-              <p>Gabriel Onitsuaf</p>
-              <p>+52 55 8901 2345</p>
-              <p>gabrielonitsuaf@nintendo.com</p>
-            </div>
+    <!-- Footer Bootstrap -->
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-3">
+            <canvas id="game" class="w-100" style="height: 200px; background: #222; border-radius: 8px;"></canvas>
           </div>
-          <p>© 2026 All rights reserved</p>
+          <div class="col-md-8">
+            <h5 class="text-danger">Bugbusters</h5>
+            <div class="row row-cols-2 row-cols-md-3 g-2">
+              <div class="col">
+                <p class="mb-1"><strong>Isaura Casas</strong></p>
+                <p class="mb-1 small">+52 55 1234 5678</p>
+                <p class="mb-1 small">isauracasas@nintendo.com</p>
+              </div>
+              <div class="col">
+                <p class="mb-1"><strong>Juan Alarcon</strong></p>
+                <p class="mb-1 small">+52 55 2345 6789</p>
+                <p class="mb-1 small">juanalarcon@nintendo.com</p>
+              </div>
+              <div class="col">
+                <p class="mb-1"><strong>Hageo Balam</strong></p>
+                <p class="mb-1 small">+52 55 3456 7890</p>
+                <p class="mb-1 small">hageobalam@nintendo.com</p>
+              </div>
+              <div class="col">
+                <p class="mb-1"><strong>Jose Evelio</strong></p>
+                <p class="mb-1 small">+52 55 4567 8901</p>
+                <p class="mb-1 small">joseevelio@nintendo.com</p>
+              </div>
+              <div class="col">
+                <p class="mb-1"><strong>Mariana Carmona</strong></p>
+                <p class="mb-1 small">+52 55 5678 9012</p>
+                <p class="mb-1 small">marianacarmona@nintendo.com</p>
+              </div>
+              <div class="col">
+                <p class="mb-1"><strong>Oscar Monroy</strong></p>
+                <p class="mb-1 small">+52 55 6789 0123</p>
+                <p class="mb-1 small">oscarmonroy@nintendo.com</p>
+              </div>
+              <div class="col">
+                <p class="mb-1"><strong>Andrea Meneses</strong></p>
+                <p class="mb-1 small">+52 55 7890 1234</p>
+                <p class="mb-1 small">andreameneses@nintendo.com</p>
+              </div>
+              <div class="col">
+                <p class="mb-1"><strong>Esaú Montiel</strong></p>
+                <p class="mb-1 small">+52 55 7711 6385</p>
+                <p class="mb-1 small">esaumontiel@nintendo.com</p>
+              </div>
+              <div class="col">
+                <p class="mb-1"><strong>Gabriel Onitsuaf</strong></p>
+                <p class="mb-1 small">+52 55 8901 2345</p>
+                <p class="mb-1 small">gabrielonitsuaf@nintendo.com</p>
+              </div>
+            </div>
+            <hr class="bg-white my-3">
+            <p class="text-center mb-0">© 2026 PokeZone. Todos los derechos reservados.</p>
+          </div>
         </div>
       </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../scripts/pyramid.js"></script>
     <script src="../scripts/3D_demistified.js"></script>
   </body>
